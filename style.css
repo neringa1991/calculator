@@ -1,0 +1,59 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  /* font-size: 4rem; */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(to right, #00aaff, #00ff6c);
+}
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(5, 10rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 10rem);
+}
+button {
+  font-size: 3rem;
+  border: 0.1rem solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.span-two {
+  grid-column: span 2;
+}
+.span-row {
+  grid-row: 3/5;
+  grid-column: 5/-1;
+}
+.output {
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+.current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
